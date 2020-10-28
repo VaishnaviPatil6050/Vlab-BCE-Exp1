@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title>Experiment 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+                * {
+                  box-sizing: border-box;
+                }
+
+                body {
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                            header {
+                  background-color: pink;
+                  padding: 30px;
+                  text-align: center;
+                  font-size: 20px;
+                  color: black;
+                }
+                /*height: 300px;  only for demonstration, should be removed 
+                /* Create two columns/boxes that floats next to each other */
+                nav {
+                  float: left;
+                  width: 30%;
+                  height: 100%;
+                  background: lightsalmon;
+                  padding: 20px;
+                }
+
+                /* Style the list inside the menu */
+                nav ul {
+                  list-style-type: none;
+                  padding: 0;
+                }
+
+                article {
+                  float: left;
+                  padding: 20px;
+                  width: 70%;
+                  background-color: #fff;/*#f1f1f1*/
+                  height: 100%; /* only for demonstration, should be removed */
+                }
+
+                /* Clear floats after the columns */
+                section:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+
+                /* Style the footer */
+                footer {
+                  background-color: #777;
+                  padding: 10px;
+                  text-align: center;
+                  color: white;
+                }
+                @media (max-width: 600px) {
+                  nav, article {
+                    width: 100%;
+                    height: auto;
+                  }
+                }
+                button :hover{
+                    background-color: #fff;
+                    color:#000;
+                }
+                .btn{
+                    color: black;
+                    text-decoration: none;
+                    border:1px solid;
+                    padding:10px 30px;
+                    background-color: lightblue; 
+                    width:50%;
+                    cursor: pointer;
+                    
+                    text-align: center;
+                    
+                    display: inline-block;
+                    font-size: 20px;
+                }
+
+            </style>
+            <script>
+                function display(){
+                    document.getElementById('instrument').style.display='none';
+                    document.getElementById('chaining').style.display='none';
+                    document.getElementById('ranging').style.display='none';
+                    document.getElementById('demo2').style.display='none';
+                    document.getElementById('demo3').style.display='none';
+                    document.getElementById('demo4').style.display='none';
+                    document.getElementById('demo').style.display= document.getElementById('demo1').style.display="block";
+                    
+                    //document.getElementById('demo1').style.display='block';
+                }
+                function instrument(){
+                    document.getElementById('surveying').style.display='none';
+                    document.getElementById('chaining').style.display='none';
+                    document.getElementById('ranging').style.display='none';
+                    document.getElementById('demo1').style.display='none';
+                    document.getElementById('demo2').style.display='none';
+                    document.getElementById('demo3').style.display='none';
+                    document.getElementById('demo').style.display= document.getElementById('demo4').style.display="block";
+                    
+                    //document.getElementById('demo1').style.display='block';
+                }
+                function chaining(){
+                    document.getElementById('instrument').style.display='none';
+                    document.getElementById('surveying').style.display='none';
+                    document.getElementById('ranging').style.display='none';
+                    document.getElementById('demo1').style.display='none';
+                    document.getElementById('demo3').style.display='none';
+                    document.getElementById('demo4').style.display='none';
+                    document.getElementById('demo').style.display= document.getElementById('demo2').style.display="block";
+                    
+                    //document.getElementById('demo1').style.display='block';
+                }
+                function ranging(){
+                    document.getElementById('instrument').style.display='none';
+                    document.getElementById('surveying').style.display='none';
+                    document.getElementById('chaining').style.display='none';
+                    document.getElementById('demo1').style.display='none';
+                    document.getElementById('demo2').style.display='none';
+                    document.getElementById('demo4').style.display='none';
+                    document.getElementById('demo').style.display=document.getElementById('demo3').style.display='block';
+                    //document.getElementById('demo2').style.display='block';
+                }
+                function Clear(){
+                    document.getElementById('demo').style.display='none';
+                    document.getElementById('surveying').style.display='block';
+                    document.getElementById('instrument').style.display='block';
+                    document.getElementById('chaining').style.display='block';
+                    document.getElementById('ranging').style.display='block';
+                    
+                }
+            </script>
+    </head>
+    <body>
+        <header>
+            <h1>Introduction to measurements of distances</h1>
+        </header>
+        
+        <section>
+            <nav>
+                <div class="button">
+                    
+                        <button class="btn" id="surveying" onclick="display()" >Surveying</button>
+                        <br><br><br>
+                        <button class="btn" id="instrument" onclick="instrument()" >Instruments</button>
+                        <br><br><br>
+                        <button class="btn" id="chaining" onclick="chaining()" >Chaining</button>
+                        <br><br><br>
+                        <button class="btn" id="ranging" onclick="ranging()" >Ranging</button><br><br><br>
+                        <button class="btn" id="clear" onclick="Clear()">Clear</button>
+                    
+                </div>
+            </nav>
+            <article id="demo" style="display: none;">
+                    
+                <div id="demo1" style="display: none"><h1 style="color:purple;">Surveying-</h1>
+                    <div style="color:deeppink;">It is the art of determining relative  position of different objects on earth by measuring horizontal distance between them.</div>
+               
+                    <h3 style="color: darkred;">Classification of surveying-</h3>
+                    <center><marque><img src="Surveying.png"></marque></center><br>
+                    <h4 style="color:green">A) Primary classification-</h4>
+                    <div style="color:fuchsia">a) Plane Surveying-</div>Surveying, in which the surface of the earth is assumed as a plane, and the curvature of the earth is ignored, is known as plane surveying.
+                    <div style="color:fuchsia">b) Geodetic Surveying-</div>It is the type of surveying in which the curvature of the earth is taken into account and a very high standard of accuracy is maintained.
+                </div>   
+                    
+                    
+                    
+                                 
+                <div id="demo4" style="display: none">
+                    <h1 style="color:purple;">Measuring Instruments-</h1>
+                    <image src="Chain.jpg" heigth="250" width="500"> <image src="Tape.jpg" width="500" height="250"><br>
+                    <h3 style="color: darkred;">Chain-</h3>
+                    Chains are formed of straight links of galvanized mild steel wire called links.The length of a link is the distance between the centers of the two consecutive middle rings.
+                    The end links include the handles. Metallic tags are indicators of the chain to facilitate quick reading of fraction of a chain in surveying measurements. Metric survey chains are available in lengths of 20m and 30m. The 20m chain contains 100 links whereas 30m. Chain contains 150 links. One link of both the type of chain measure 20cm.       
+                        
+                        <h3 style="color: darkred;">Tape-</h3>
+                        <p style="color:green">1. CLOTH OR LINEN TAPE-</p>12 to 15 mm wide cloth or linen is varnished and graduations are marked. They are provided with brass handle at the ends. They are available in length of 10 m, 20 m, 25 m and 30 m.
+                        
+                        <p style="color:green">2. METALLIC TAPE-</p>They are made up of varnished strip of waterproof linen interwoven with small wires of brass, copper or bronze. End 100 mm length of tapes are provided with leather or suitable strong plastic materials. Tapes of length 10 m, 20 m, 30 m and 50 m are available.
+                    
+                        <p style="color:green">3. SYNTHETIC TAPE-</p>Synthetic tapes are made of glass fibers coated with PVC. These are light in weight and flexible. They are available in lengths of 5m, 10m, 20m, 30m, and 50m.
+                </div>
+                
+                <div id="demo2" style="display: none">
+                    <h1 style="color:purple;">Chaining-</h1>
+                    <div style="color:deeppink;">The most commonly adopted method for measurement of distances is by using chain or tape is known as chaining.</div>
+                    <h3 style="color: darkred;">Measuring Instruments-</h3>
+                    <image src="Arrows.jpg" height="300"><image src="RangingRod.png" height="300"><image src="Pegs.jpg" height="300"> 
+                    <p style="color:green">1. Arrows</p><br>When the length of the line to be measured is more than a chain length, there is need to mark the end of the chain length. Arrows are used for this purpose. Arrows are made up of 4 mm diameter steel wire with one end sharpened and other 
+                    end bent into a loop. Length of an arrow is approximately 400 mm.
+                    <br><p style="color:green">2. Ranging rod</p><br>Ranging rods are 2 to 3 m long and are made of hardwood. They are provided with iron shoe at one end They are usually circular in section with 30 mm diameter and are painted with 200 mm colour bands of red and white or with black and white.
+                    <br><p style="color:green">3. Wooden peg</p><br>Wooden pegs are used in measuring a length of a line to mark the endpoints of the line. The pegs are made of hard wood of 25 mm × 25 mm section, 150 mm long with one end tapered When driven in ground to mark station points they project about 40 mm.
+                </div>
+                    
+                
+                <div id="demo3" style="display: none">
+                    <h1 style="color:purple;">Ranging-</h1>
+                    <div style="color:deeppink;">When length of survey line is more than chain length, intermediate points are to be located in order that they should lie on same chain is called ranging.</div><br>
+                    <center><marque><image src="Ranging.png"> </marque></center><br>
+                    <h3 style="color: darkred;">Direct Ranging</h3>
+                    If the first and last points are intervisible this method is possible. Figure shows the intervisible stations A and B in which an intermediate point C is to be located.
+                    Point C is selected at a distance slightly less than a chain length. At points A and B ranging rods are fixed. The assistant holds another ranging rod near C. Surveyor positions himself 
+                    approximately 2 m behind station A and looking along line AB directs the assistant to move at right angles to the line AB till he aligns the ranging rod along AB. Then surveyor instructs the
+                    assistant to mark that point and stretch the chain along AC.<br>
+                    <image src="DirectRanging.jpg"> <image src="ReciprocalRanging.jpg">
+                    <h3 style="color: darkred;">Indirect or Reciprocal Levelling</h3>Due to intervening ground, if the ranging rod at B is not visible from station A, reciprocal ranging may be resorted. Figure 12.19 shows this scheme of ranging.
+                    It needs two assistants one at point M and another at point N, where from those points both station A and station B are visible. It needs one surveyor at A and another at B. To start with M and N 
+                    are approximately selected, say M1 and N1. Then surveyor near end A ranges person near M to position M2 such that AM2N1 are in a line. Then surveyor at B directs person at N, to move to N2 such that 
+                    BN2M2 are in a line. The process is repeated till AMNB are in a line.
+</div>
+                    
+                    
+                    <!--<image src="chaining.png" width="500" height="300"> -->
+                   
+                </article>
+            
+        </section>
+            
+</html>
