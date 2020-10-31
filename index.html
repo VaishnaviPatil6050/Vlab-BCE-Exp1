@@ -85,6 +85,7 @@
             </style>
             <script>
                 function display(){
+                    document.getElementById('clear').style.display='block';
                     document.getElementById('instrument').style.display='none';
                     document.getElementById('chaining').style.display='none';
                     document.getElementById('ranging').style.display='none';
@@ -96,6 +97,7 @@
                     //document.getElementById('demo1').style.display='block';
                 }
                 function instrument(){
+                    document.getElementById('clear').style.display='block';
                     document.getElementById('surveying').style.display='none';
                     document.getElementById('chaining').style.display='none';
                     document.getElementById('ranging').style.display='none';
@@ -107,6 +109,7 @@
                     //document.getElementById('demo1').style.display='block';
                 }
                 function chaining(){
+                    document.getElementById('clear').style.display='block';
                     document.getElementById('instrument').style.display='none';
                     document.getElementById('surveying').style.display='none';
                     document.getElementById('ranging').style.display='none';
@@ -118,6 +121,7 @@
                     //document.getElementById('demo1').style.display='block';
                 }
                 function ranging(){
+                    document.getElementById('clear').style.display='block';
                     document.getElementById('instrument').style.display='none';
                     document.getElementById('surveying').style.display='none';
                     document.getElementById('chaining').style.display='none';
@@ -128,11 +132,13 @@
                     //document.getElementById('demo2').style.display='block';
                 }
                 function Clear(){
+                    
                     document.getElementById('demo').style.display='none';
                     document.getElementById('surveying').style.display='block';
                     document.getElementById('instrument').style.display='block';
                     document.getElementById('chaining').style.display='block';
                     document.getElementById('ranging').style.display='block';
+                    document.getElementById('clear').style.display='none';
                     
                 }
             </script>
@@ -153,7 +159,7 @@
                         <button class="btn" id="chaining" onclick="chaining()" >Chaining</button>
                         <br><br><br>
                         <button class="btn" id="ranging" onclick="ranging()" >Ranging</button><br><br><br>
-                        <button class="btn" id="clear" onclick="Clear()">Clear</button>
+                        <button class="btn" id="clear" style="display:none" onclick="Clear()">Clear</button>
                     
                 </div>
             </nav>
